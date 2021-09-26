@@ -1,5 +1,5 @@
 // DEBUG
-const DEBUG = true;
+const DEBUG = false;
 
 // Size of canvas
 const SIZE_CANVAS = 500;

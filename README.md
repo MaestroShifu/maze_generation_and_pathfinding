@@ -1,5 +1,4 @@
-# maze_generation_and_pathfinding
-
-raw.githubusercontent.com/MaestroShifu/maze_generation_and_pathfinding/main/assets/maze_generation.mp4
-
-[Example runing of maze generation and search with pathfinding](raw.githubusercontent.com/MaestroShifu/maze_generation_and_pathfinding/main/assets/maze_generation.mp4)
+# Maze generation and pathfinding mode debug
+![Example runing of maze generation and search with pathfinding](./assets/maze_generation.gif)
+# Maze generation and pathfinding
+![Example runing of maze generation and search with pathfinding](./assets/maze_generation_v2.gif)
