@@ -25,3 +25,15 @@ const getIndex = (i, j) => {
   }
   return i + j * cols;
 }
+
+const removeFromArray = (arr, elt) => {
+  for (let i = arr.length - 1 ; i >= 0; i--) {
+    if(arr[i] === elt) {
+      arr.splice(i, 1);
+    }
+  }
+}
+
+const heuristic = (a, b) => {
+  return dist(a.i, a.j, b.i, b.j); // Distance Euclidiana
+}

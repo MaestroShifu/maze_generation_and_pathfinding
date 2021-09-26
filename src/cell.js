@@ -11,9 +11,35 @@ class Cell {
     this.bottom = true;
     this.left = true;
     this.right = true;
+
+    // *A
+    this.previous = undefined;
+    this.neighbors = [];
+    this.f = 0;
+    this.g = 0;
+    this.h = 0;
   }
 
-  highlight(isPoint = false) {
+  addNeighbors() {
+    const top = grid[getIndex(this.i, (this.j - 1))];
+    const right = grid[getIndex((this.i + 1), this.j)];
+    const bottom = grid[getIndex(this.i, (this.j + 1))];
+    const left = grid[getIndex((this.i - 1), this.j)];
+    if(top && !this.top) {
+      this.neighbors.push(top);
+    }
+    if(bottom && !this.bottom) {
+      this.neighbors.push(bottom);
+    }
+    if(left && !this.left) {
+      this.neighbors.push(left);
+    }
+    if(right && !this.right) {
+      this.neighbors.push(right);
+    }
+  }
+
+  highlight(colorPoint = color(65)) {
     const x = this.i * SIZE_CELL;
     const y = this.j * SIZE_CELL;
 
@@ -22,13 +48,7 @@ class Cell {
     const targetSize = SIZE_CELL - (TARGET_SIZE * 2); 
 
     noStroke();
-
-    if(isPoint) {
-      fill(255, 204, 0);
-    } else {
-      fill(0, 0, 255, 100);
-    }
-
+    fill(colorPoint);
     rect(dx, dy, targetSize, targetSize);
   }
 
